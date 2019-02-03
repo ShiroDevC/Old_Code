@@ -1,0 +1,116 @@
+#searchtable {
+	border-top: 5px;
+    border-bottom: 5px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    border-color: rgba(143,188,143,0.75);
+	padding: 25px 50px;
+    background-color: rgba(152,251,152,0.35);
+	margin-left: 10%;
+	margin-right: 10%;
+	}
+
+#bar { 
+	text-align: left; 
+    border-bottom:1px solid rgba(192,192,192,0.9); 
+    background: rgba(232,232,232,0.85); 
+    padding:10px 20px; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%;
+	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    }	
+	
+.button {
+    border: none;
+    padding: 8px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 5px;
+	outline: none;
+	}
+.button1 {
+    background-color: rgba(240,255,240,0.5); 
+    border: 2px solid rgb(240,255,240);
+	}
+
+.button1:hover {
+    background-color: rgb(240,255,240);
+	}
+
+.button2 {
+    background-color: rgba(227,255,243,0.5); 
+    border: 2px solid rgb(227,255,243);
+	}
+
+.button2:hover {
+    background-color: rgb(227,255,243);
+	}
+
+.button3 {
+    background-color: rgba(247,255,227,0.5); 
+    border: 2px solid rgb(247,255,227);
+	}
+
+.button3:hover {
+    background-color: rgb(247,255,227);
+	}
+
+.button4 {
+    background-color: rgba(196,208,196,0.5);
+    border: 2px solid rgb(196,208,196);
+	}
+
+.button4:hover {
+	background-color: rgb(196,208,196);
+	}
+
+.button5 {
+    background-color: rgba(195,172,204,0.5);
+    border: 2px solid rgb(195,172,204);
+	}
+
+.button5:hover {
+    background-color: rgb(195,172,204);
+	}
+	
+table {
+	text-align:center; 
+	width:100%;
+    }
+
+td {
+	padding: 10px;
+    }
+
+h1 { 
+	color : darkolivegreen; 
+	text-align: center;
+	font-size: 250%
+	}
+	
+h2 { 
+	color : dimgray; 
+	text-align: center; 
+	font-size: 150%
+	}
+	
+h3 { 
+	text-align: center; 
+	font-size: 125%
+	}
+	
+body {
+	text-align: center; 
+	background-color: rgb(240,255,240);
+	/*background-color: rgb(227,255,243);*/
+	/*background-color: rgb(247,255,227);*/
+	/*background-color: rgb(196,208,196);*/
+	/*background-color: rgb(195,172,204);*/
+	
+	/*background-image: url("https://www.fancyhometrends.com/item/images/144312/1600x1600/Tapete-Uni-hellgruen-PS-Tribute-To-135-Years-05513-80-05.jpg");*/
+	background-size:cover
+	}

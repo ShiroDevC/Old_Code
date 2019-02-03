@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<link href="search.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js">
+    </script><script src="query.js"></script>
+</head>
+<body>
+<div id="bar">
+	<button class="button button1" onclick="changeBackground('rgb(240,255,240)')"> </button>
+	<button class="button button2" onclick="changeBackground('rgb(227,255,243)')"> </button>
+	<button class="button button3" onclick="changeBackground('rgb(247,255,227)')"> </button>
+	<button class="button button4" onclick="changeBackground('rgb(196,208,196)')"> </button>
+	<button class="button button5" onclick="changeBackground('rgb(195,172,204)')"> </button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h1>Fuzzy Prefix Search Engine</h1>
+<br>
+<br>
+<br>
+<form><input id="q" name="query" type="text"  onkeydown="if (event.keyCode == 13) return false;"/>
+<br>
+<br>
+<p id="result"><br />
+%RESULT%</p>
+</body>
+</html>
