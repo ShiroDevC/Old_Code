@@ -1,4 +1,4 @@
-This repository contains code from my time as a student including my Bachelor Thesis, a game project and some excercise sheets. The code in this portfolio is written by myself. The game project code is therefore only an excerpt of the whole source code for the game.
+This repository contains code from my time as a student including my Bachelor Thesis, a game project and some excercise sheets. The code in this portfolio is written by myself. The game project code is therefore only an excerpt of the whole source code for the game.For more details please refer to the portfolio pdf that can be find in this folder.
 
 The Python code is from my Bachelor Thesis about Individualizing a Spatial Reasoner for the Mental Model Theory.
 For this thesis is used the CCOBRA Framework with which mental models can be tested and compared. All Python code
