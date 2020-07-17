@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    {% load static %}
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:index'%}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+        </ul>
+        {% if username %}
+         
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:user'%}">{{username}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:logout'%}">Logout</a>
+        </li>
+        </ul>
+        
+        {% else %}    
+        
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> 
+            <a class="nav-link" href="{% url 'blog:login'%}">Login</a>
+        </li>
+        </ul>
+        {% endif %}
+    </nav>
+ 
+ <div style="background: url(https://onlyvectorbackgrounds.com/wp-content/uploads/2018/10/Abstract-Gradient-Shadow-Lines-Background-Orange.jpg)" class="page-holder bg-cover">    
+    <div class="container h-100">
+   
+    <div class="p-3 mb-2 bg-light text-dark">
+    <h1>{{ entry.entry_title }}</h1>
+
+    
+    
+    <div>
+    <article>
+      
+      {% for img in entry.imagem_set.all %}
+        
+        {% if img.picture %}
+            <img class="img-responsive watch-right" alt="not found" src="{{ MEDIA_ROOT}}{{ img.picture.url }}" width="30%" height="30%">
+        {% endif %}
+        
+      {% endfor %}
+      <br>
+      <p>{{entry.entry_text|linebreaks}}</p>
+      <p>Posted on {{entry.pub_date}} by {{entry.author}}</p>
+      
+    </article>
+    </div>
+    <br>
+    <div>
+    <article>
+      <h3>Comments</h3>
+      
+      {% for com in entry.comment_set.all %}
+        
+        {% if com.comment_text %}
+            <div class="card">
+              <div class="card-body">
+                <p>{{com.comment_text }}</p>
+                <p>{{com.pub_date}} by {{com.author}}</p>
+              </div>
+            </div>
+            <br>
+        {% endif %}     
+      {% endfor %}
+      
+      <p>Leave a Comment:</p>
+      <form action="{% url 'blog:detail' entry.id %}" method="post">
+        {% csrf_token %}
+        <textarea cols="40" rows="5" name="comment_text"></textarea>    
+        <br>
+        <label for="comment_author">Your Name: </label>
+        <input type="text" name="comment_author">
+        <br>
+        <input type="submit" value="Post Comment">
+      </form>
+      
+    </article>
+    </div>
+    </div>
+    </div>
+    
+</div>
+    
+</body>
+
+</html>
